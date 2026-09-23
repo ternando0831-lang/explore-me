@@ -10,7 +10,12 @@ Only the latest release receives security fixes. Explore Me updates itself autom
 
 Please do not report security problems in public places such as social media or forums.
 
-Send the details by email to the feedback address shown in the app (**Settings → Feedback**). Please include:
+Report it privately in one of these ways:
+
+- On GitHub: the **Security** tab of this repository → **Report a vulnerability** (only you and the author can see the report)
+- By email: the feedback address shown in the app (**Settings → Feedback**)
+
+Please include:
 
 - the versions of Explore Me and Windows
 - what the problem is and how to reproduce it
@@ -32,7 +37,12 @@ Problems in bundled third-party software (Electron / Chromium, 7-Zip) can also b
 
 セキュリティ上の問題は、SNS や掲示板など公開の場所には書かないでください。
 
-アプリに表示しているフィードバックの宛先（**設定 → フィードバック**）へ、メールで詳細をお送りください。次の内容があると助かります。
+次のどちらかの方法で、非公開でお知らせください。
+
+- GitHub: このリポジトリの **Security** タブ →「**Report a vulnerability**」（報告者と作者だけが見られます）
+- メール: アプリに表示しているフィードバックの宛先（**設定 → フィードバック**）
+
+次の内容があると助かります。
 
 - Explore Me と Windows のバージョン
 - 問題の内容と再現の手順
