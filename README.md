@@ -54,7 +54,8 @@ Download `ExploreMe-Setup-<version>.exe` from [Releases](../../releases/latest) 
 | --- | --- |
 | OS | Windows 11 (64-bit, x64) |
 | Windows 10 | Not tested (it is expected to work, but has not been checked) |
-| Windows on ARM | Not tested |
+| 32-bit Windows (x86) | Not supported |
+| Windows on ARM (ARM64) | Not tested (Windows 11 on ARM runs x64 apps through emulation, so it is expected to work) |
 | Installation | Per user (no administrator rights needed); you can choose the folder |
 
 ### If Windows shows "Windows protected your PC"
@@ -65,10 +66,10 @@ Choose **More info → Run anyway**.
 To make sure the file is the genuine one, compare its SHA-256 with the value on the release page. In PowerShell:
 
 ```powershell
-Get-FileHash .\ExploreMe-Setup-0.1.0.exe -Algorithm SHA256
+Get-FileHash .\ExploreMe-Setup-0.2.0.exe -Algorithm SHA256
 ```
 
-The installer is scanned on VirusTotal for each release. v0.1.0: [0 / 68 detections](https://www.virustotal.com/gui/file/bdbf9b5019b8655c13963fef48c4287a22ec304126816409d23b792a4a385a23) (scanned on 2026-09-23).
+The installer is scanned on VirusTotal for each release. v0.2.0: [0 / 67 detections](https://www.virustotal.com/gui/file/3b689a803871c502fd74468ed034a349b4c44a9d1d190f67d0b1db078ee0e566) (scanned on 2026-09-23).
 
 ## Updates
 
@@ -163,7 +164,8 @@ Windows 11 のエクスプローラーと同じ見た目・操作で使える、
 | --- | --- |
 | OS | Windows 11（64 ビット、x64） |
 | Windows 10 | 未確認（動く見込みはありますが、確認していません） |
-| ARM 版 Windows | 未確認 |
+| 32 ビット版 Windows（x86） | 対応していません |
+| ARM 版 Windows（ARM64） | 未確認（ARM 版 Windows 11 は x64 のアプリをエミュレーションで動かすため、動く見込みはあります） |
 | インストール | ユーザーごと（管理者権限は不要）。インストール先は選べます |
 
 ### 「Windows によって PC が保護されました」と出たら
@@ -174,10 +176,10 @@ Windows 11 のエクスプローラーと同じ見た目・操作で使える、
 心配な場合は、ダウンロードしたファイルが本物か確かめられます。各リリースのページに SHA-256 の値を載せています。PowerShell で次を実行し、同じ値か比べてください。
 
 ```powershell
-Get-FileHash .\ExploreMe-Setup-0.1.0.exe -Algorithm SHA256
+Get-FileHash .\ExploreMe-Setup-0.2.0.exe -Algorithm SHA256
 ```
 
-インストーラーはリリースごとに VirusTotal で検査しています。v0.1.0: [検出 0 / 68](https://www.virustotal.com/gui/file/bdbf9b5019b8655c13963fef48c4287a22ec304126816409d23b792a4a385a23)（2026-09-23 に検査）。
+インストーラーはリリースごとに VirusTotal で検査しています。v0.2.0: [検出 0 / 67](https://www.virustotal.com/gui/file/3b689a803871c502fd74468ed034a349b4c44a9d1d190f67d0b1db078ee0e566)（2026-09-23 に検査）。
 
 ## 更新
 
