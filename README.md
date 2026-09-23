@@ -1,5 +1,106 @@
 # Explore Me
 
+English | [日本語](#日本語)
+
+A tabbed, dual-pane file manager for Windows that looks and works like the Windows 11 File Explorer.
+
+- Two panes side by side, each with tabs. Shift+F5 copies and Shift+F6 moves the selection to the other pane
+- The same keys and right-click menu as File Explorer (plus the full Windows menu under "Show more options")
+- Quick Look (Space for a large preview) and a command palette (Ctrl+K)
+- Workspaces (save and reopen a whole set of tabs), color labels, and the Shelf (collect items with Ctrl+S, then move or copy them together)
+- Disk usage, flat view, and search through subfolders (uses Everything or the Windows index when available)
+- Create and extract zip files; extract 7z, rar, tar.gz and more
+- English / Japanese, light / dark
+
+## Usage
+
+It works like File Explorer. Press **F1** in the app for every shortcut, and **Ctrl+,** (or the gear at the top right) for Settings.
+
+### The window
+
+- Navigation on the left: Home, pinned folders, This PC (drives), Workspaces, the Shelf
+- On the right: two panes, each with its own tabs; the one you last clicked is the one you work in (Ctrl+Shift+D switches to a single pane)
+- The app opens on Home (frequent places, drives and recent items)
+- The language follows Windows (English or Japanese); change it in Settings → General → Language
+
+### Common shortcuts
+
+| Action | Keys |
+| --- | --- |
+| Back / up one folder | Backspace / Alt+↑ |
+| Type in the address bar | Ctrl+L (Alt+D, F4) |
+| Filter this folder / search subfolders too | Ctrl+E / Ctrl+Shift+F |
+| New tab / close tab | Ctrl+T / Ctrl+W |
+| Single pane / two panes | Ctrl+Shift+D |
+| Copy / move to the other pane | Shift+F5 / Shift+F6 |
+| Large preview (Quick Look) | Space |
+| Command palette (find commands and folders by name) | Ctrl+K |
+| Put on the Shelf (move or copy them together later) | Ctrl+S |
+| Undo / redo | Ctrl+Z / Ctrl+Y |
+| Large icons / medium icons / list / details | Ctrl+Shift+2 / 3 / 5 / 6 |
+| Show hidden files | Ctrl+H |
+
+- Right-click opens a Windows 11 style menu. For the full Windows menu (including items added by 7-Zip and other apps), Shift+right-click or choose "Show more options"
+- Extract an archive (zip, 7z, rar, tar.gz and more) with "Extract here" in its right-click menu
+- Turn on "Open folders with Explore Me" in Settings to open folders from the desktop and other apps in Explore Me as well
+
+## Download
+
+Download `ExploreMe-Setup-<version>.exe` from [Releases](../../releases/latest) and run it.
+
+### System requirements
+
+| | |
+| --- | --- |
+| OS | Windows 11 (64-bit, x64) |
+| Windows 10 | Not tested (it is expected to work, but has not been checked) |
+| Windows on ARM | Not tested |
+| Installation | Per user (no administrator rights needed); you can choose the folder |
+
+### If Windows shows "Windows protected your PC"
+
+The installer is not code-signed, so Windows SmartScreen may show this screen the first time you run it.
+Choose **More info → Run anyway**.
+
+To make sure the file is the genuine one, compare its SHA-256 with the value on the release page. In PowerShell:
+
+```powershell
+Get-FileHash .\ExploreMe-Setup-0.1.0.exe -Algorithm SHA256
+```
+
+## Updates
+
+The app checks for a new version when it starts, downloads it in the background and installs it when you quit (turn this off in Settings → About).
+The update check (GitHub) is the only network access. No usage data is sent.
+
+## Uninstall
+
+Uninstall Explore Me from Windows Settings → Apps → Installed apps.
+If "Open folders with Explore Me" was on, folders open in File Explorer again.
+
+## License
+
+Free for personal and business use. Redistribution and modification are not permitted. See [LICENSE](LICENSE).
+Bundled third-party software (Electron, 7-Zip and others) is covered by its own licenses (`THIRD_PARTY_NOTICES.txt` in the installation folder).
+
+## Copyright
+
+Copyright (c) 2026 ternando0831-lang
+
+## Feedback
+
+Send bug reports and requests by email from Settings → Feedback in the app.
+
+## Known limitations
+
+- 7z, rar and the like can be extracted, not created (only zip can be created). Password-protected archives cannot be extracted
+- Old Japanese archives (lzh, tar and others with Shift_JIS names) may not extract with the right file names
+- While the window is maximized, its frame does not show Mica (the translucent backdrop)
+
+---
+
+# 日本語
+
 Windows 11 のエクスプローラーと同じ見た目・操作で使える、タブと 2 画面のファイラーです。
 
 - 2 画面（左右のペイン）とタブ。片方からもう片方へ Shift+F5 でコピー、Shift+F6 で移動
@@ -19,6 +120,7 @@ Windows 11 のエクスプローラーと同じ見た目・操作で使える、
 - 左のナビゲーション: ホーム・ピン留めしたフォルダー・PC（ドライブ）・ワークスペース・仮置き
 - 右側: 左右 2 つのペイン。それぞれにタブがあり、クリックした側が操作の対象になります（Ctrl+Shift+D で 1 画面にも）
 - 起動するとホーム（よく使う場所・ドライブ・最近使った項目）が開きます
+- 表示言語は Windows に合わせます（日本語か英語）。設定 → 全般 → 言語 で変えられます
 
 ### よく使う操作
 
@@ -93,23 +195,3 @@ Copyright (c) 2026 ternando0831-lang
 - 7z・rar などは展開だけです（作成は zip のみ）。パスワード付きの書庫は展開できません
 - 古い日本語の書庫（Shift_JIS の名前の lzh・tar など）は、名前が正しく展開されないことがあります
 - 最大化している間は、ウィンドウの枠に Mica（半透明の背景）がかかりません
-
----
-
-## English
-
-Explore Me is a tabbed, dual-pane file manager for Windows that looks and works like the Windows 11 File Explorer.
-
-**Basics**: two panes with tabs (Ctrl+Shift+D for a single pane), Explorer's keys and right-click menu (Shift+right-click for the full Windows menu), Space for Quick Look, Ctrl+K for the command palette, Shift+F5 / Shift+F6 to copy / move to the other pane, Ctrl+S to collect items and move them later. F1 lists every shortcut; Ctrl+, opens Settings. The UI is available in English (Settings → General → Language).
-
-**Download** `ExploreMe-Setup-<version>.exe` from [Releases](../../releases/latest). Requires Windows 11 (64-bit, x64); Windows 10 and Windows on ARM have not been tested. Installs per user (no administrator rights needed).
-
-**"Windows protected your PC"**: the installer is not code-signed, so SmartScreen may show this on first run. Choose **More info → Run anyway**. Each release page lists the SHA-256 of the installer (`Get-FileHash <file> -Algorithm SHA256`).
-
-**Updates**: the app checks for a new version at start-up, downloads it in the background and installs it when you quit (can be turned off in Settings → About). The update check (GitHub) is the only network access; no usage data is sent.
-
-**License**: free for personal and business use; redistribution and modification are not permitted. See [LICENSE](LICENSE). Bundled third-party software (Electron, 7-Zip and others) is covered by its own licenses (`THIRD_PARTY_NOTICES.txt` in the installation folder).
-
-**Feedback**: Settings → Feedback in the app opens an email.
-
-Copyright (c) 2026 ternando0831-lang
