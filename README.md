@@ -4,6 +4,8 @@ English | [日本語](#日本語)
 
 A tabbed, dual-pane file manager for Windows that looks and works like the Windows 11 File Explorer.
 
+![Explore Me with two panes: photo thumbnails on the left, a website project on the right, and a preview of the selected photo](images/en/hero-dark.png)
+
 - Two panes side by side, each with tabs. Shift+F5 copies and Shift+F6 moves the selection to the other pane
 - The same keys and right-click menu as File Explorer (plus the full Windows menu under "Show more options")
 - Quick Look (Space for a large preview) and a command palette (Ctrl+K)
@@ -11,6 +13,24 @@ A tabbed, dual-pane file manager for Windows that looks and works like the Windo
 - Disk usage, flat view, and search through subfolders (uses Everything or the Windows index when available)
 - Create and extract zip files; extract 7z, rar, tar.gz and more
 - English / Japanese, light / dark
+
+## Screenshots
+
+**Two panes**: select items and press Shift+F5 to copy them to the other pane.
+
+![Selecting three photos and copying them to the other pane with Shift+F5](images/en/copy.gif)
+
+**Quick Look**: press Space for a large preview, then the arrow keys to go through the folder.
+
+![Opening Quick Look with Space and moving through photos with the arrow key](images/en/quicklook.gif)
+
+**One pane or two**: switch from the command palette (Ctrl+K) or with Ctrl+Shift+D. Alt+P shows or hides the preview.
+
+![Switching from two panes to one through the command palette, then hiding and showing the preview](images/en/layout.gif)
+
+**Light theme**, with a Markdown file in the preview:
+
+![The light theme with a README rendered in the preview pane](images/en/light.png)
 
 ## Usage
 
@@ -114,6 +134,8 @@ Send bug reports and requests by email from Settings → Feedback in the app.
 
 Windows 11 のエクスプローラーと同じ見た目・操作で使える、タブと 2 画面のファイラーです。
 
+![2 画面の Explore Me。左に写真の縮小表示、右に Web サイトのプロジェクト、右端に選んだ写真のプレビュー](images/ja/hero-dark.png)
+
 - 2 画面（左右のペイン）とタブ。片方からもう片方へ Shift+F5 でコピー、Shift+F6 で移動
 - エクスプローラーと同じキー操作・右クリックメニュー（「その他のオプションを確認」で Windows 本来のメニューも）
 - クイックルック（Space で大きなプレビュー）、コマンドパレット（Ctrl+K）
@@ -121,6 +143,24 @@ Windows 11 のエクスプローラーと同じ見た目・操作で使える、
 - 容量の内訳、フラット表示、サブフォルダーの検索（Everything・Windows のインデックスがあれば使う）
 - zip の作成・展開、7z・rar・tar.gz などの展開
 - 日本語 / 英語、ライト / ダーク
+
+## スクリーンショット
+
+**2 画面**: 選んで Shift+F5 を押すと、反対側のペインへコピーします。
+
+![写真を 3 枚選び、Shift+F5 で反対側のペインへコピーする様子](images/ja/copy.gif)
+
+**クイックルック**: Space で大きく表示し、矢印キーでフォルダーの中を順に見られます。
+
+![Space でクイックルックを開き、矢印キーで写真を送る様子](images/ja/quicklook.gif)
+
+**1 画面と 2 画面**: コマンドパレット（Ctrl+K）か Ctrl+Shift+D で切り替えます。Alt+P でプレビューの表示・非表示。
+
+![コマンドパレットから 2 画面を 1 画面に切り替え、プレビューを閉じて開く様子](images/ja/layout.gif)
+
+**ライトテーマ**（プレビューに Markdown を表示）:
+
+![ライトテーマで、README をプレビューに表示した画面](images/ja/light.png)
 
 ## 使い方
 
