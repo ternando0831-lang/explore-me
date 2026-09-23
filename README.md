@@ -87,10 +87,10 @@ Choose **More info → Run anyway**.
 To make sure the file is the genuine one, compare its SHA-256 with the value on the release page. In PowerShell:
 
 ```powershell
-Get-FileHash .\ExploreMe-Setup-0.3.0.exe -Algorithm SHA256
+Get-FileHash .\ExploreMe-Setup-0.3.1.exe -Algorithm SHA256
 ```
 
-The installer is scanned on VirusTotal for each release. v0.3.0: [0 / 61 detections](https://www.virustotal.com/gui/file/b37071dae3929c2ef8e6a3c8a9ced057bcec4ad8decab84d689116cad54ebfcf) (scanned on 2026-09-23).
+The installer is scanned on VirusTotal for each release. v0.3.1: [0 / 67 detections](https://www.virustotal.com/gui/file/3da8a740d429244ed6342ada5b0d335a654e445ff53ac3768776ab2786fbfc3b) (scanned on 2026-09-23).
 
 ## Updates
 
@@ -218,10 +218,10 @@ Windows 11 のエクスプローラーと同じ見た目・操作で使える、
 心配な場合は、ダウンロードしたファイルが本物か確かめられます。各リリースのページに SHA-256 の値を載せています。PowerShell で次を実行し、同じ値か比べてください。
 
 ```powershell
-Get-FileHash .\ExploreMe-Setup-0.3.0.exe -Algorithm SHA256
+Get-FileHash .\ExploreMe-Setup-0.3.1.exe -Algorithm SHA256
 ```
 
-インストーラーはリリースごとに VirusTotal で検査しています。v0.3.0: [検出 0 / 61](https://www.virustotal.com/gui/file/b37071dae3929c2ef8e6a3c8a9ced057bcec4ad8decab84d689116cad54ebfcf)（2026-09-23 に検査）。
+インストーラーはリリースごとに VirusTotal で検査しています。v0.3.1: [検出 0 / 67](https://www.virustotal.com/gui/file/3da8a740d429244ed6342ada5b0d335a654e445ff53ac3768776ab2786fbfc3b)（2026-09-23 に検査）。
 
 ## 更新
 
