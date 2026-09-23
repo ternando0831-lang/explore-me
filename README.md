@@ -73,6 +73,12 @@ Get-FileHash .\ExploreMe-Setup-0.1.0.exe -Algorithm SHA256
 The app checks for a new version when it starts, downloads it in the background and installs it when you quit (turn this off in Settings → About).
 The update check (GitHub) is the only network access. No usage data is sent.
 
+## Privacy
+
+- Your files are handled on your PC only; nothing about them is sent anywhere
+- The update check is a request to GitHub, which may record your IP address under GitHub's own privacy statement
+- Feedback is sent from your own mail app. The author uses your email address and message only to reply and to improve the app, keeps them only as long as needed, and does not share them except as required by law. To ask about, correct or delete them, write to the feedback address shown in the app
+
 ## Uninstall
 
 Uninstall Explore Me from Windows Settings → Apps → Installed apps.
@@ -81,7 +87,7 @@ If "Open folders with Explore Me" was on, folders open in File Explorer again.
 ## License
 
 Free for personal and business use. Redistribution and modification are not permitted. See [LICENSE](LICENSE).
-Bundled third-party software (Electron, 7-Zip and others) is covered by its own licenses (`THIRD_PARTY_NOTICES.txt` in the installation folder).
+Bundled third-party software (Electron, 7-Zip and others) is covered by its own licenses (`THIRD_PARTY_NOTICES.txt` in the installation folder). The source code of the bundled 7-Zip (GNU LGPL) is attached to each release.
 
 ## Copyright
 
@@ -174,6 +180,12 @@ Get-FileHash .\ExploreMe-Setup-0.1.0.exe -Algorithm SHA256
 起動したときに新しい版を確認し、裏でダウンロードして、アプリを終了したときに更新します（設定 → バージョン情報で切り替えられます）。
 通信するのは、この更新の確認（GitHub）だけです。使い方などの情報は送りません。
 
+## 個人情報
+
+- ファイルはすべて PC の中だけで扱い、外部には何も送りません
+- 更新の確認は GitHub への通信で、GitHub は自社のプライバシー方針に従って IP アドレスを記録することがあります
+- フィードバックは利用者自身のメールアプリから送られます。受け取ったメールアドレスと内容は、返信とアプリの改善のためだけに使い、必要な期間だけ保管し、法令に基づく場合を除いて第三者に提供しません。開示・訂正・削除のご依頼は、アプリに表示しているフィードバックの宛先へ
+
 ## アンインストール
 
 Windows の「設定 → アプリ → インストールされているアプリ」から Explore Me をアンインストールします。
@@ -182,7 +194,7 @@ Windows の「設定 → アプリ → インストールされているアプ�
 ## ライセンス
 
 無料で使えます（個人・法人とも）。再配布・改変はできません。詳しくは [LICENSE](LICENSE) を見てください。
-同梱しているソフトウェア（Electron、7-Zip など）はそれぞれのライセンスに従います（インストール先の `THIRD_PARTY_NOTICES.txt`）。
+同梱しているソフトウェア（Electron、7-Zip など）はそれぞれのライセンスに従います（インストール先の `THIRD_PARTY_NOTICES.txt`）。同梱の 7-Zip（GNU LGPL）のソースコードは、各リリースに添付しています。
 
 ## 著作権
 

@@ -4,40 +4,47 @@ Copyright (c) 2026 ternando0831-lang. All rights reserved.
 
 By installing or using Explore Me (the "Software"), you agree to these terms. The Software is made by ternando0831-lang (the "author").
 
-1. Use
-You may use the Software free of charge, for personal or business purposes.
+1. License
+The author grants you a free, non-exclusive, non-transferable license to install and use the Software on your devices, for personal or business purposes.
 
 2. Restrictions
 You may not:
 - redistribute the Software, in whole or in part, whether for a fee or free of charge (you are welcome to point others to the official download page);
 - modify or adapt the Software, or reverse engineer, decompile or disassemble it, except as far as applicable law allows;
-- sell, rent or lease the Software, or offer it as part of a product or service.
+- sell, rent or lease the Software, or distribute or provide the Software itself as part of another product or service.
 
 3. Copyright
-The Software is owned by its author. Third-party software included with the Software is covered by its own license, and the restrictions in section 2 do not apply to it (THIRD_PARTY_NOTICES.txt, LICENSE.electron.txt and LICENSES.chromium.html in the installation folder). 7-Zip, which the Software uses to extract archives (resources\7z in the installation folder, GNU LGPL), may be replaced or modified by you, and nothing in these terms prevents the analysis of the Software needed to do so.
+The Software is owned by its author. Third-party software included with the Software is covered by its own license, and the restrictions in section 2 do not apply to it (THIRD_PARTY_NOTICES.txt, LICENSE.electron.txt and LICENSES.chromium.html in the installation folder). 7-Zip, which the Software uses to extract archives (resources\7z in the installation folder, GNU LGPL), may be replaced or modified by you, and nothing in these terms prevents the analysis of the Software needed to do so. Its source code is available on the distribution page with each release.
 
 4. No warranty
 The Software is provided "as is", without warranty of any kind, express or implied, including merchantability, fitness for a particular purpose and non-infringement. The author has no obligation to provide support, fix defects or release updates, and may stop distributing the Software at any time.
 
 5. Limitation of liability
-Except in the case of the author's willful misconduct or gross negligence, the author is not liable for any damage arising from the use of, or inability to use, the Software, including loss or corruption of files and data. Back up important data before working with it.
+Except in the case of the author's willful misconduct or gross negligence, the author's liability for any damage arising from the use of, or inability to use, the Software (including loss or corruption of files and data) is limited to direct and ordinary damages, up to a total of JPY 10,000. Back up important data before working with it. Nothing in these terms excludes or limits any liability that cannot be excluded or limited under the law that applies to you.
 
 6. Network use and personal information
-The Software contacts its distribution server (GitHub) only to check for a new version, and only while automatic updates are on. It sends no usage data. Feedback is sent from your own mail app; the email address and the contents the author receives are used only to reply to you and to improve the Software, and are not disclosed to third parties except as required by law.
+While automatic updates are on, the Software asks its distribution server (GitHub) whether a new version is available, and downloads and installs new versions automatically. That request goes to GitHub, which may record your IP address under its own privacy statement. The Software sends no other information, such as how you use it.
+Feedback is sent from your own mail app. The email address and the contents the author receives are used only to reply to you and to improve the Software, are kept only as long as needed for those purposes, and are not disclosed to third parties except as required by law. To ask about, correct or delete this information, write to the feedback address shown in the Software (Settings → Feedback).
 
-7. Termination
-If you breach these terms, your permission to use the Software ends, and you must delete the Software.
+7. Other software and services
+Features that work with other software or services (such as Everything, Visual Studio Code, the Windows share sheet and GitHub) are subject to those products' own terms. The author is not responsible for them.
 
-8. Changes
-These terms may change with a new version of the Software. Using a version released after a change means you accept the changed terms.
+8. Termination
+You may stop using the Software at any time by uninstalling it. If you breach these terms, your license ends, and you must delete the Software. Sections 3, 4, 5, 6, 11, 12 and 13 remain in effect after the license ends.
 
-9. Severability
+9. Changes
+The author may change these terms when the change is to your benefit or is reasonable in light of the purpose of these terms. Before a change takes effect, the author announces the changed terms, what has changed and when the change takes effect on the distribution page (GitHub). The changed terms apply from that date, including to versions installed by automatic update.
+
+10. Transfer
+The author may transfer the rights and obligations under these terms, together with the Software, to a third party. You may not transfer yours.
+
+11. Severability
 If any provision of these terms is held invalid or unenforceable, the remaining provisions remain in full effect.
 
-10. Governing law and jurisdiction
+12. Governing law and jurisdiction
 These terms are governed by the laws of Japan. The district court with jurisdiction over the author's place of residence has exclusive jurisdiction in the first instance over any dispute relating to these terms or the Software.
 
-11. Language
+13. Language
 These terms are provided in English and Japanese. If the two versions differ, the English version prevails.
 
 ------------------------------------------------------------------------------
@@ -48,38 +55,45 @@ Copyright (c) 2026 ternando0831-lang. All rights reserved.
 
 本ソフトウェア「Explore Me」（以下「本ソフトウェア」）をインストールまたは使用した時点で、本規約に同意したものとみなします。本ソフトウェアの作者（以下「作者」）は ternando0831-lang です。
 
-1. 使用
-本ソフトウェアは、個人・法人を問わず、無料で使用できます。
+1. 使用許諾
+作者は利用者に対し、本ソフトウェアを利用者の機器にインストールして使用する、無償・非独占的・譲渡不能の権利を許諾します。個人・法人を問わず、業務にも使えます。
 
 2. 禁止事項
 次のことはできません。
 ・本ソフトウェアの全部または一部を、有償・無償を問わず再配布すること（配布元のページを案内することは自由です）
 ・本ソフトウェアを改変・翻案すること、またリバースエンジニアリング・逆コンパイル・逆アセンブルすること（法令で認められる範囲を除きます）
-・本ソフトウェアを販売・貸与すること、または本ソフトウェアを含む製品・サービスとして提供すること
+・本ソフトウェアを販売・貸与すること、または本ソフトウェアそのものを他の製品・サービスの一部として配布・提供すること
 
 3. 著作権
-本ソフトウェアの著作権は作者に帰属します。本ソフトウェアに含まれる第三者のソフトウェアには、それぞれのライセンスが適用され、第 2 条の禁止事項は及びません（インストール先の THIRD_PARTY_NOTICES.txt、LICENSE.electron.txt、LICENSES.chromium.html）。書庫の展開に使う 7-Zip（インストール先の resources\7z、GNU LGPL）は、利用者が差し替えたり改変したりでき、そのために必要な範囲で本ソフトウェアを解析することを妨げません。
+本ソフトウェアの著作権は作者に帰属します。本ソフトウェアに含まれる第三者のソフトウェアには、それぞれのライセンスが適用され、第 2 条の禁止事項は及びません（インストール先の THIRD_PARTY_NOTICES.txt、LICENSE.electron.txt、LICENSES.chromium.html）。書庫の展開に使う 7-Zip（インストール先の resources\7z、GNU LGPL）は、利用者が差し替えたり改変したりでき、そのために必要な範囲で本ソフトウェアを解析することを妨げません。そのソースコードは、各リリースとともに配布元のページで入手できます。
 
 4. 無保証
 本ソフトウェアは「現状のまま」提供され、明示・黙示を問わず、商品性・特定目的への適合性・権利の非侵害を含むいかなる保証もありません。作者は、サポート・不具合の修正・更新を提供する義務を負わず、いつでも本ソフトウェアの配布を終了することがあります。
 
 5. 免責
-作者の故意または重大な過失による場合を除き、本ソフトウェアの使用または使用できなかったことにより生じた損害（ファイルの消失・破損、データの損失を含みます）について、作者は責任を負いません。大切なデータは、ファイル操作の前にバックアップを取ってください。
+作者の故意または重大な過失による場合を除き、本ソフトウェアの使用または使用できなかったことにより生じた損害（ファイルの消失・破損、データの損失を含みます）について作者が負う責任は、直接かつ通常の損害に限り、合計 1 万円を上限とします。大切なデータは、ファイル操作の前にバックアップを取ってください。本規約は、利用者に適用される法令により排除または制限できない責任を排除・制限するものではありません。
 
 6. 通信と個人情報
-本ソフトウェアは、自動更新が有効な場合に限り、新しいバージョンの有無を配布元（GitHub）に問い合わせます。それ以外に、使用状況などの情報を送信することはありません。フィードバックは利用者自身のメールアプリから送信されます。作者が受け取ったメールアドレスと内容は、返信と本ソフトウェアの改善のためだけに使い、法令に基づく場合を除いて第三者に提供しません。
+自動更新が有効な間、本ソフトウェアは新しいバージョンの有無を配布元（GitHub）に問い合わせ、新しいバージョンを自動でダウンロードしてインストールします。この問い合わせは GitHub に届き、GitHub は自社のプライバシー方針に従って利用者の IP アドレスを記録することがあります。それ以外に、使い方などの情報を送信することはありません。
+フィードバックは利用者自身のメールアプリから送信されます。作者が受け取ったメールアドレスと内容は、返信と本ソフトウェアの改善のためだけに使い、その目的に必要な期間だけ保管し、法令に基づく場合を除いて第三者に提供しません。これらの情報の開示・訂正・削除のご依頼は、本ソフトウェアに表示しているフィードバックの宛先（設定 → フィードバック）へご連絡ください。
 
-7. 使用許諾の終了
-利用者が本規約に違反した場合、本ソフトウェアの使用許諾は終了し、利用者は本ソフトウェアを削除するものとします。
+7. 他のソフトウェア・サービス
+他のソフトウェアやサービスと連携する機能（Everything、Visual Studio Code、Windows の共有、GitHub など）には、それぞれの製品の規約が適用されます。作者はそれらについて責任を負いません。
 
-8. 規約の変更
-本規約は、新しいバージョンで変更されることがあります。変更後のバージョンを使用した場合、変更後の規約に同意したものとみなします。
+8. 使用許諾の終了
+利用者は、本ソフトウェアをアンインストールすることで、いつでも使用をやめられます。利用者が本規約に違反した場合、使用許諾は終了し、利用者は本ソフトウェアを削除するものとします。第 3・4・5・6・11・12・13 条は、使用許諾の終了後も有効です。
 
-9. 分離可能性
+9. 規約の変更
+作者は、利用者の利益に適合する場合、または本規約の目的に照らして合理的な場合に、本規約を変更できます。変更するときは、効力が生じる前に、変更後の規約・変更内容・効力発生日を配布元のページ（GitHub）で告知します。変更後の規約は、その日から、自動更新で入った版にも適用されます。
+
+10. 権利の譲渡
+作者は、本規約上の権利と義務を、本ソフトウェアとともに第三者に譲渡できます。利用者は、自らの権利と義務を譲渡できません。
+
+11. 分離可能性
 本規約のいずれかの規定が無効または執行不能と判断された場合でも、その他の規定は引き続き完全に有効です。
 
-10. 準拠法と管轄
+12. 準拠法と管轄
 本規約は日本法に準拠します。本規約または本ソフトウェアに関する紛争については、作者の住所地を管轄する地方裁判所を第一審の専属的合意管轄裁判所とします。
 
-11. 言語
+13. 言語
 本規約は英語と日本語で提供します。両者に食い違いがある場合は、英語版が優先します。
