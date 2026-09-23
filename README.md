@@ -68,6 +68,8 @@ To make sure the file is the genuine one, compare its SHA-256 with the value on 
 Get-FileHash .\ExploreMe-Setup-0.1.0.exe -Algorithm SHA256
 ```
 
+The installer is scanned on VirusTotal for each release. v0.1.0: [0 / 68 detections](https://www.virustotal.com/gui/file/bdbf9b5019b8655c13963fef48c4287a22ec304126816409d23b792a4a385a23) (scanned on 2026-09-23).
+
 ## Updates
 
 The app checks for a new version when it starts, downloads it in the background and installs it when you quit (turn this off in Settings → About).
@@ -174,6 +176,8 @@ Windows 11 のエクスプローラーと同じ見た目・操作で使える、
 ```powershell
 Get-FileHash .\ExploreMe-Setup-0.1.0.exe -Algorithm SHA256
 ```
+
+インストーラーはリリースごとに VirusTotal で検査しています。v0.1.0: [検出 0 / 68](https://www.virustotal.com/gui/file/bdbf9b5019b8655c13963fef48c4287a22ec304126816409d23b792a4a385a23)（2026-09-23 に検査）。
 
 ## 更新
 
