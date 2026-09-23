@@ -87,6 +87,8 @@ Bundled third-party software (Electron, 7-Zip and others) is covered by its own 
 
 Copyright (c) 2026 ternando0831-lang
 
+Windows and Visual Studio Code are trademarks of the Microsoft group of companies. Other product names are trademarks of their respective owners.
+
 ## Feedback
 
 Send bug reports and requests by email from Settings → Feedback in the app.
@@ -185,6 +187,8 @@ Windows の「設定 → アプリ → インストールされているアプ�
 ## 著作権
 
 Copyright (c) 2026 ternando0831-lang
+
+Windows・Visual Studio Code は Microsoft グループの商標です。その他の製品名は、それぞれの権利者の商標です。
 
 ## フィードバック
 
