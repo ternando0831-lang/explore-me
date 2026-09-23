@@ -45,7 +45,14 @@ Windows 11 のエクスプローラーと同じ見た目・操作で使える、
 
 [Releases](../../releases/latest) から `ExploreMe-Setup-<版>.exe` をダウンロードして実行します。
 
-動作環境: Windows 11（64 ビット）。Windows 10 では確認していません。
+### 動作環境
+
+| 項目 | 内容 |
+| --- | --- |
+| OS | Windows 11（64 ビット、x64） |
+| Windows 10 | 未確認（動く見込みはありますが、確認していません） |
+| ARM 版 Windows | 未確認 |
+| インストール | ユーザーごと（管理者権限は不要）。インストール先は選べます |
 
 ### 「Windows によって PC が保護されました」と出たら
 
@@ -73,6 +80,10 @@ Windows の「設定 → アプリ → インストールされているアプ�
 無料で使えます（個人・法人とも）。再配布・改変はできません。詳しくは [LICENSE](LICENSE) を見てください。
 同梱しているソフトウェア（Electron、7-Zip など）はそれぞれのライセンスに従います（インストール先の `THIRD_PARTY_NOTICES.txt`）。
 
+## 著作権
+
+Copyright (c) 2026 ternando0831-lang
+
 ## フィードバック
 
 不具合の報告や要望は、アプリの「設定 → フィードバック」からメールで送れます。
@@ -91,7 +102,7 @@ Explore Me is a tabbed, dual-pane file manager for Windows that looks and works 
 
 **Basics**: two panes with tabs (Ctrl+Shift+D for a single pane), Explorer's keys and right-click menu (Shift+right-click for the full Windows menu), Space for Quick Look, Ctrl+K for the command palette, Shift+F5 / Shift+F6 to copy / move to the other pane, Ctrl+S to collect items and move them later. F1 lists every shortcut; Ctrl+, opens Settings. The UI is available in English (Settings → General → Language).
 
-**Download** `ExploreMe-Setup-<version>.exe` from [Releases](../../releases/latest). Requires Windows 11 (64-bit); Windows 10 has not been tested.
+**Download** `ExploreMe-Setup-<version>.exe` from [Releases](../../releases/latest). Requires Windows 11 (64-bit, x64); Windows 10 and Windows on ARM have not been tested. Installs per user (no administrator rights needed).
 
 **"Windows protected your PC"**: the installer is not code-signed, so SmartScreen may show this on first run. Choose **More info → Run anyway**. Each release page lists the SHA-256 of the installer (`Get-FileHash <file> -Algorithm SHA256`).
 
@@ -100,3 +111,5 @@ Explore Me is a tabbed, dual-pane file manager for Windows that looks and works 
 **License**: free for personal and business use; redistribution and modification are not permitted. See [LICENSE](LICENSE). Bundled third-party software (Electron, 7-Zip and others) is covered by its own licenses (`THIRD_PARTY_NOTICES.txt` in the installation folder).
 
 **Feedback**: Settings → Feedback in the app opens an email.
+
+Copyright (c) 2026 ternando0831-lang
