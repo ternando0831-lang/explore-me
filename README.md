@@ -9,6 +9,7 @@ A tabbed, dual-pane file manager for Windows that looks and works like the Windo
 - Two panes side by side, each with tabs. Shift+F5 copies and Shift+F6 moves the selection to the other pane
 - The same keys and right-click menu as File Explorer (plus the full Windows menu under "Show more options")
 - Quick Look (Space for a large preview) and a command palette (Ctrl+K)
+- A preview for many kinds of files: photos including HEIC and camera RAW (through the codecs in Windows), video and audio, PDF, Word / Excel / PowerPoint and OpenDocument files (without Office), EPUB, fonts, the contents of archives, who signed a program, and the details File Explorer shows (duration, camera, author…)
 - Workspaces (save and reopen a whole set of tabs), color labels, and the Shelf (collect items with Ctrl+S, then move or copy them together)
 - Disk usage, flat view, and search through subfolders (uses Everything or the Windows index when available)
 - Create and extract zip files; extract 7z, rar, tar.gz and more
@@ -86,10 +87,10 @@ Choose **More info → Run anyway**.
 To make sure the file is the genuine one, compare its SHA-256 with the value on the release page. In PowerShell:
 
 ```powershell
-Get-FileHash .\ExploreMe-Setup-0.2.0.exe -Algorithm SHA256
+Get-FileHash .\ExploreMe-Setup-0.3.0.exe -Algorithm SHA256
 ```
 
-The installer is scanned on VirusTotal for each release. v0.2.0: [0 / 67 detections](https://www.virustotal.com/gui/file/3b689a803871c502fd74468ed034a349b4c44a9d1d190f67d0b1db078ee0e566) (scanned on 2026-09-23).
+The installer is scanned on VirusTotal for each release. v0.3.0: [0 / 61 detections](https://www.virustotal.com/gui/file/b37071dae3929c2ef8e6a3c8a9ced057bcec4ad8decab84d689116cad54ebfcf) (scanned on 2026-09-23).
 
 ## Updates
 
@@ -126,7 +127,7 @@ Send bug reports and requests by email from Settings → Feedback in the app.
 
 - 7z, rar and the like can be extracted, not created (only zip can be created). Password-protected archives cannot be extracted
 - Old Japanese archives (lzh, tar and others with Shift_JIS names) may not extract with the right file names
-- While the window is maximized, its frame does not show Mica (the translucent backdrop)
+- The preview of Office, OpenDocument and EPUB files shows their text and tables, not their layout. Pictures such as HEIC or RAW show only when Windows has the codec for them (Microsoft Store extensions); video and audio formats the app cannot play (avi, wmv, wma…) show Windows' thumbnail and details instead
 
 ---
 
@@ -139,6 +140,7 @@ Windows 11 のエクスプローラーと同じ見た目・操作で使える、
 - 2 画面（左右のペイン）とタブ。片方からもう片方へ Shift+F5 でコピー、Shift+F6 で移動
 - エクスプローラーと同じキー操作・右クリックメニュー（「その他のオプションを確認」で Windows 本来のメニューも）
 - クイックルック（Space で大きなプレビュー）、コマンドパレット（Ctrl+K）
+- いろいろなファイルのプレビュー: HEIC やカメラの RAW を含む写真（Windows のコーデックを使用）、動画・音声、PDF、Word・Excel・PowerPoint と OpenDocument のファイル（Office が無くても）、EPUB、フォント、書庫の中身、プログラムの署名元、エクスプローラーの詳細と同じ情報（長さ・カメラ・作成者など）
 - ワークスペース（開いているタブ一式を保存して呼び出す）、カラーラベル、仮置き（Ctrl+S で集めてまとめて移動）
 - 容量の内訳、フラット表示、サブフォルダーの検索（Everything・Windows のインデックスがあれば使う）
 - zip の作成・展開、7z・rar・tar.gz などの展開
@@ -216,10 +218,10 @@ Windows 11 のエクスプローラーと同じ見た目・操作で使える、
 心配な場合は、ダウンロードしたファイルが本物か確かめられます。各リリースのページに SHA-256 の値を載せています。PowerShell で次を実行し、同じ値か比べてください。
 
 ```powershell
-Get-FileHash .\ExploreMe-Setup-0.2.0.exe -Algorithm SHA256
+Get-FileHash .\ExploreMe-Setup-0.3.0.exe -Algorithm SHA256
 ```
 
-インストーラーはリリースごとに VirusTotal で検査しています。v0.2.0: [検出 0 / 67](https://www.virustotal.com/gui/file/3b689a803871c502fd74468ed034a349b4c44a9d1d190f67d0b1db078ee0e566)（2026-09-23 に検査）。
+インストーラーはリリースごとに VirusTotal で検査しています。v0.3.0: [検出 0 / 61](https://www.virustotal.com/gui/file/b37071dae3929c2ef8e6a3c8a9ced057bcec4ad8decab84d689116cad54ebfcf)（2026-09-23 に検査）。
 
 ## 更新
 
@@ -256,4 +258,4 @@ Windows・Visual Studio Code は Microsoft グループの商標です。その�
 
 - 7z・rar などは展開だけです（作成は zip のみ）。パスワード付きの書庫は展開できません
 - 古い日本語の書庫（Shift_JIS の名前の lzh・tar など）は、名前が正しく展開されないことがあります
-- 最大化している間は、ウィンドウの枠に Mica（半透明の背景）がかかりません
+- Office・OpenDocument・EPUB のプレビューは文字と表だけで、レイアウトは再現しません。HEIC や RAW などの写真は、Windows にそのコーデック（Microsoft Store の拡張機能）があるときだけ表示できます。アプリで再生できない動画・音声（avi・wmv・wma など）は、代わりに Windows のサムネイルと詳細を表示します
