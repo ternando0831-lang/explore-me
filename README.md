@@ -12,6 +12,7 @@ A tabbed, dual-pane file manager for Windows that looks and works like the Windo
 - A preview for many kinds of files: photos including HEIC and camera RAW (through the codecs in Windows), video and audio, PDF, Word / Excel / PowerPoint and OpenDocument files (without Office), EPUB, fonts, the contents of archives, who signed a program, and the details File Explorer shows (duration, camera, author…)
 - Workspaces (save and reopen a whole set of tabs), color labels, and the Shelf (collect items with Ctrl+S, then move or copy them together)
 - Disk usage, flat view, and search through subfolders (uses Everything or the Windows index when available)
+- Filter with wildcards and conditions (`*.jpg`, `size:>10MB`, `date:today`) and group by date or date taken; the sort order and grouping are remembered for each folder
 - Create and extract zip files; extract 7z, rar, tar.gz and more
 - English / Japanese, light / dark
 
@@ -57,12 +58,14 @@ It works like File Explorer. Press **F1** in the app for every shortcut, and **C
 | Large preview (Quick Look) | Space |
 | Command palette (find commands and folders by name) | Ctrl+K |
 | Put on the Shelf (move or copy them together later) | Ctrl+S |
-| Undo / redo | Ctrl+Z / Ctrl+Y |
+| Undo / redo (also a delete to the Recycle Bin) | Ctrl+Z / Ctrl+Y |
 | Large icons / medium icons / list / details | Ctrl+Shift+2 / 3 / 5 / 6 |
 | Show hidden files | Ctrl+H |
 
 - Right-click opens a Windows 11 style menu. For the full Windows menu (including items added by 7-Zip and other apps), Shift+right-click or choose "Show more options"
 - Extract an archive (zip, 7z, rar, tar.gz and more) with "Extract here" in its right-click menu
+- In the filter box (Ctrl+E), `*.jpg`, `ext:png`, `kind:picture`, `size:>10MB` and `date:today` narrow the list; separate several with spaces
+- Drag a tab to reorder it or to move it to the other pane
 - Turn on "Open folders with Explore Me" in Settings to open folders from the desktop and other apps in Explore Me as well
 
 ## Download
@@ -87,10 +90,10 @@ Choose **More info → Run anyway**.
 To make sure the file is the genuine one, compare its SHA-256 with the value on the release page. In PowerShell:
 
 ```powershell
-Get-FileHash .\ExploreMe-Setup-0.3.1.exe -Algorithm SHA256
+Get-FileHash .\ExploreMe-Setup-0.4.0.exe -Algorithm SHA256
 ```
 
-The installer is scanned on VirusTotal for each release. v0.3.1: [0 / 67 detections](https://www.virustotal.com/gui/file/3da8a740d429244ed6342ada5b0d335a654e445ff53ac3768776ab2786fbfc3b) (scanned on 2026-09-23).
+The installer is scanned on VirusTotal for each release. v0.4.0: [0 / 65 detections](https://www.virustotal.com/gui/file/6b658b8b73d75c7016d316fae1cd73ef578f176141c29d3ad77d64b6c1d78051) (scanned on 2026-09-25).
 
 ## Updates
 
@@ -143,6 +146,7 @@ Windows 11 のエクスプローラーと同じ見た目・操作で使える、
 - いろいろなファイルのプレビュー: HEIC やカメラの RAW を含む写真（Windows のコーデックを使用）、動画・音声、PDF、Word・Excel・PowerPoint と OpenDocument のファイル（Office が無くても）、EPUB、フォント、書庫の中身、プログラムの署名元、エクスプローラーの詳細と同じ情報（長さ・カメラ・作成者など）
 - ワークスペース（開いているタブ一式を保存して呼び出す）、カラーラベル、仮置き（Ctrl+S で集めてまとめて移動）
 - 容量の内訳、フラット表示、サブフォルダーの検索（Everything・Windows のインデックスがあれば使う）
+- 絞り込みにワイルドカードと条件（`*.jpg`・`サイズ:>10MB`・`日付:今日`）、日付や撮影日時でのグループ表示。並べ替えとグループはフォルダーごとに覚えます
 - zip の作成・展開、7z・rar・tar.gz などの展開
 - 日本語 / 英語、ライト / ダーク
 
@@ -188,12 +192,14 @@ Windows 11 のエクスプローラーと同じ見た目・操作で使える、
 | 大きなプレビュー（クイックルック） | Space |
 | コマンドパレット（操作やフォルダーを名前で探す） | Ctrl+K |
 | 仮置きに入れる（あとでまとめて移動・コピー） | Ctrl+S |
-| 元に戻す / やり直す | Ctrl+Z / Ctrl+Y |
+| 元に戻す / やり直す（ごみ箱への削除も戻せます） | Ctrl+Z / Ctrl+Y |
 | 表示の切り替え（大アイコン / 中アイコン / 一覧 / 詳細） | Ctrl+Shift+2 / 3 / 5 / 6 |
 | 隠しファイルの表示 | Ctrl+H |
 
 - 右クリックは Windows 11 風のメニューです。7-Zip などが加えた項目も含む Windows 本来のメニューは、Shift+右クリックか「その他のオプションを確認」から
 - 書庫（zip・7z・rar・tar.gz など）は右クリックの「ここに展開」で展開できます
+- 絞り込み欄（Ctrl+E）では `*.jpg`・`拡張子:png`・`種類:画像`・`サイズ:>10MB`・`日付:今日` で絞れます。空白で区切って組み合わせられます
+- タブはドラッグで並べ替え・反対側のペインへ移動できます
 - 「フォルダーを Explore Me で開く」を設定でオンにすると、デスクトップやほかのアプリから開いたフォルダーも Explore Me で開きます
 
 ## ダウンロード
@@ -218,10 +224,10 @@ Windows 11 のエクスプローラーと同じ見た目・操作で使える、
 心配な場合は、ダウンロードしたファイルが本物か確かめられます。各リリースのページに SHA-256 の値を載せています。PowerShell で次を実行し、同じ値か比べてください。
 
 ```powershell
-Get-FileHash .\ExploreMe-Setup-0.3.1.exe -Algorithm SHA256
+Get-FileHash .\ExploreMe-Setup-0.4.0.exe -Algorithm SHA256
 ```
 
-インストーラーはリリースごとに VirusTotal で検査しています。v0.3.1: [検出 0 / 67](https://www.virustotal.com/gui/file/3da8a740d429244ed6342ada5b0d335a654e445ff53ac3768776ab2786fbfc3b)（2026-09-23 に検査）。
+インストーラーはリリースごとに VirusTotal で検査しています。v0.4.0: [検出 0 / 65](https://www.virustotal.com/gui/file/6b658b8b73d75c7016d316fae1cd73ef578f176141c29d3ad77d64b6c1d78051)（2026-09-25 に検査）。
 
 ## 更新
 
