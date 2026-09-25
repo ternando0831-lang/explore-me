@@ -41,6 +41,14 @@ English | [日本語](#日本語)
 
 ![Opening Quick Look with Space and moving through photos with the arrow key](images/en/quicklook.gif)
 
+**Undo, even for a replaced file**: when a file with the same name is already there, it shows which one is newer. Overwrite it, and Undo brings the old one back from the Recycle Bin.
+
+![Copying a newer Budget.csv over an older one in another folder, then Undo puts the older file back](images/en/undo.gif)
+
+**Archives open like folders**: open a zip, then copy what is inside to the other pane with Shift+F5.
+
+![Opening Photos 2026.zip like a folder and copying its three photos to the other pane](images/en/archive.gif)
+
 **One pane or two**: switch from the command palette (Ctrl+K) or with Ctrl+Shift+D. Alt+P shows or hides the preview.
 
 ![Switching from two panes to one through the command palette, then hiding and showing the preview](images/en/layout.gif)
@@ -190,6 +198,14 @@ Ask questions, share ideas or report bugs in [Discussions](../../discussions). Y
 **クイックルック**: Space で大きく表示し、矢印キーでフォルダーの中を順に見られます。
 
 ![Space でクイックルックを開き、矢印キーで写真を送る様子](images/ja/quicklook.gif)
+
+**置き換えたファイルも元に戻せる**: 同じ名前のファイルがあると、どちらが新しいかを並べて見せます。上書きしても、元に戻すで古いファイルがごみ箱から戻ります。
+
+![新しい予算.csv を別のフォルダーの古い方に上書きし、元に戻すで古いファイルに戻る様子](images/ja/undo.gif)
+
+**書庫をフォルダーのように開く**: zip を開いて、中のファイルを Shift+F5 で反対側へ取り出します。
+
+![写真 2026.zip をフォルダーのように開き、中の写真 3 枚を反対側へコピーする様子](images/ja/archive.gif)
 
 **1 画面と 2 画面**: コマンドパレット（Ctrl+K）か Ctrl+Shift+D で切り替えます。Alt+P でプレビューの表示・非表示。
 
