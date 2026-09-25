@@ -2,20 +2,34 @@
 
 English | [日本語](#日本語)
 
-A tabbed, dual-pane file manager for Windows that looks and works like the Windows 11 File Explorer.
+**File Explorer, in two panes.** Explore Me is a tabbed, dual-pane file manager for Windows that looks and works like the Windows 11 File Explorer, so there is nothing new to learn. It adds what File Explorer does not have.
 
 ![Explore Me with two panes: photo thumbnails on the left, a website project on the right, and a preview of the selected photo](images/en/hero-dark.png)
 
-- Two panes side by side, each with tabs. Shift+F5 copies and Shift+F6 moves the selection to the other pane
+**[Download the latest version](../../releases/latest)** · free · Windows 11 (64-bit) · English and Japanese
+
+- **Two panes, each with tabs.** Shift+F5 copies and Shift+F6 moves the selection to the other pane
+- **Quick Look.** Space shows a large preview of photos (HEIC and camera RAW too), video, PDF and Office files, and the arrow keys go through the folder
+- **Undo that brings files back.** An Undo button right after a delete, move or copy. A file replaced by a copy or move goes to the Recycle Bin (on local drives), so Undo restores it too
+
+## Features
+
 - The same keys and right-click menu as File Explorer (plus the full Windows menu under "Show more options")
-- Quick Look (Space for a large preview) and a command palette (Ctrl+K)
+- A command palette (Ctrl+K) that finds commands and folders by name
 - A preview for many kinds of files: photos including HEIC and camera RAW (through the codecs in Windows), video and audio, PDF, Word / Excel / PowerPoint and OpenDocument files (without Office), EPUB, fonts, the contents of archives, who signed a program, and the details File Explorer shows (duration, camera, author…)
 - Workspaces (save and reopen a whole set of tabs), color labels, and the Shelf (collect items with Ctrl+S, then move or copy them together)
 - Disk usage, flat view, and search through subfolders (uses Everything or the Windows index when available)
 - Filter with wildcards and conditions (`*.jpg`, `size:>10MB`, `date:today`) and group by date or date taken; the sort order and grouping are remembered for each folder
 - Open zip, 7z, rar, tar.gz and other archives like folders (read-only) and copy items out of them; create zip files
-- Safer file operations: an Undo button right after a delete, move or copy; a file replaced by a copy or move is kept in the Recycle Bin; free space is checked before copying
+- Free space is checked before copying, and on FAT32 drives files of 4 GB or more are left out with a note, instead of failing at the end
 - English / Japanese, light / dark
+
+## Is it safe?
+
+- **Nothing about you or your files is sent.** The only network access is the update check to GitHub, and you can turn it off (Settings → About)
+- **It does not change how Windows opens folders** unless you turn on "Open folders with Explore Me" or "Open Explore Me with Win+E" in Settings. Turning them off, or uninstalling, puts back what was there before
+- **Deleted items go to the Recycle Bin** (on drives that have one). Only Shift+Delete deletes them for good, and it always asks first
+- **The installer is not code-signed**, so Windows may warn you the first time you run it. Each release lists the installer's SHA-256 and its VirusTotal result (see [Download](#download))
 
 ## Screenshots
 
@@ -125,7 +139,7 @@ Windows and Visual Studio Code are trademarks of the Microsoft group of companie
 
 ## Feedback
 
-Send bug reports and requests by email from Settings → Feedback in the app.
+Ask questions, share ideas or report bugs in [Discussions](../../discussions). You can also send them privately by email from Settings → Feedback in the app.
 
 ## Known limitations
 
@@ -138,20 +152,34 @@ Send bug reports and requests by email from Settings → Feedback in the app.
 
 # 日本語
 
-Windows 11 のエクスプローラーと同じ見た目・操作で使える、タブと 2 画面のファイラーです。
+**いつものエクスプローラーのまま、2 画面に。** Windows 11 のエクスプローラーと同じ見た目・操作で使える、タブと 2 画面のファイラーです。覚え直すことはありません。そのうえで、エクスプローラーにないものを足しています。
 
 ![2 画面の Explore Me。左に写真の縮小表示、右に Web サイトのプロジェクト、右端に選んだ写真のプレビュー](images/ja/hero-dark.png)
 
-- 2 画面（左右のペイン）とタブ。片方からもう片方へ Shift+F5 でコピー、Shift+F6 で移動
+**[最新版をダウンロード](../../releases/latest)**（無料・Windows 11 の 64 ビット版・日本語と英語）
+
+- **2 画面とタブ**: 選んだものを Shift+F5 で反対側へコピー、Shift+F6 で移動
+- **クイックルック**: Space で大きくプレビュー。HEIC やカメラの RAW の写真、動画、PDF、Office のファイルも。矢印キーでフォルダーの中を次々に見られます
+- **置き換えたファイルも元に戻せる**: 削除・移動・コピーの直後に「元に戻す」ボタン。コピーや移動で置き換えたファイルはごみ箱に入るので（PC の内蔵ドライブ）、元に戻すで戻ります
+
+## 機能
+
 - エクスプローラーと同じキー操作・右クリックメニュー（「その他のオプションを確認」で Windows 本来のメニューも）
-- クイックルック（Space で大きなプレビュー）、コマンドパレット（Ctrl+K）
+- コマンドパレット（Ctrl+K）で、操作やフォルダーを名前で探せます
 - いろいろなファイルのプレビュー: HEIC やカメラの RAW を含む写真（Windows のコーデックを使用）、動画・音声、PDF、Word・Excel・PowerPoint と OpenDocument のファイル（Office が無くても）、EPUB、フォント、書庫の中身、プログラムの署名元、エクスプローラーの詳細と同じ情報（長さ・カメラ・作成者など）
 - ワークスペース（開いているタブ一式を保存して呼び出す）、カラーラベル、仮置き（Ctrl+S で集めてまとめて移動）
 - 容量の内訳、フラット表示、サブフォルダーの検索（Everything・Windows のインデックスがあれば使う）
 - 絞り込みにワイルドカードと条件（`*.jpg`・`サイズ:>10MB`・`日付:今日`）、日付や撮影日時でのグループ表示。並べ替えとグループはフォルダーごとに覚えます
 - zip・7z・rar・tar.gz などの書庫をフォルダーのように開いて（読み取り専用）中の項目を取り出せます。zip の作成も
-- 安心して操作できるように: 削除・移動・コピーの直後に「元に戻す」ボタン、コピーや移動で置き換えたファイルはごみ箱に残す、コピーの前に空き容量を確認
+- コピーの前に行き先の空き容量を確認。FAT32 のドライブには 4 GB 以上のファイルを置けないので、最後に失敗する代わりに、その旨を添えて外します
 - 日本語 / 英語、ライト / ダーク
+
+## 安全ですか？
+
+- **あなたやファイルについての情報は送りません。** ネットにつなぐのは GitHub への更新確認だけで、オフにもできます（設定 → バージョン情報）
+- **Windows がフォルダーを開く方法は変えません。** 変わるのは、設定で「フォルダーを Explore Me で開く」「Win+E で Explore Me を開く」をオンにしたときだけです。オフにするかアンインストールすると元に戻ります
+- **削除したものはごみ箱に入ります**（ごみ箱のあるドライブ）。完全に削除するのは Shift+Delete のときだけで、必ず確認します
+- **インストーラーはコード署名をしていません。** 初めて実行するときに Windows の警告が出ることがあります。各リリースにインストーラーの SHA-256 と VirusTotal の検査結果を載せています（[ダウンロード](#ダウンロード)）
 
 ## スクリーンショット
 
@@ -261,7 +289,7 @@ Windows・Visual Studio Code は Microsoft グループの商標です。その�
 
 ## フィードバック
 
-不具合の報告や要望は、アプリの「設定 → フィードバック」からメールで送れます。
+質問・要望・不具合の報告は [Discussions](../../discussions) へどうぞ。アプリの「設定 → フィードバック」から、メールで非公開に送ることもできます。
 
 ## 既知の制限
 
