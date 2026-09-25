@@ -29,7 +29,7 @@ English | [日本語](#日本語)
 - **Nothing about you or your files is sent.** The only network access is the update check to GitHub, and you can turn it off (Settings → About)
 - **It does not change how Windows opens folders** unless you turn on "Open folders with Explore Me" or "Open Explore Me with Win+E" in Settings. Turning them off, or uninstalling, puts back what was there before
 - **Deleted items go to the Recycle Bin** (on drives that have one). Only Shift+Delete deletes them for good, and it always asks first
-- **The installer is not code-signed**, so Windows may warn you the first time you run it. Each release lists the installer's SHA-256 and its VirusTotal result (see [Download](#download))
+- **The installer is not code-signed**, so Windows may warn you the first time you run it. Each release lists the installer's SHA-256 (see [Download](#download))
 
 ## Screenshots
 
@@ -113,10 +113,10 @@ Choose **More info → Run anyway**.
 To make sure the file is the genuine one, compare its SHA-256 with the value on the release page. In PowerShell:
 
 ```powershell
-Get-FileHash .\ExploreMe-Setup-0.5.0.exe -Algorithm SHA256
+Get-FileHash .\ExploreMe-Setup-0.5.1.exe -Algorithm SHA256
 ```
 
-The installer is scanned on VirusTotal for each release. v0.5.0: [0 / 68 detections](https://www.virustotal.com/gui/file/f557a98aca8ffaeaace8806317d2736561f848a80fcd19062874a7f6544774b1) (scanned on 2026-09-26).
+VirusTotal: the v0.5.0 installer, [0 / 68 detections](https://www.virustotal.com/gui/file/f557a98aca8ffaeaace8806317d2736561f848a80fcd19062874a7f6544774b1) (scanned on 2026-09-26).
 
 ## Updates
 
@@ -187,7 +187,7 @@ Ask questions, share ideas or report bugs in [Discussions](../../discussions). Y
 - **あなたやファイルについての情報は送りません。** ネットにつなぐのは GitHub への更新確認だけで、オフにもできます（設定 → バージョン情報）
 - **Windows がフォルダーを開く方法は変えません。** 変わるのは、設定で「フォルダーを Explore Me で開く」「Win+E で Explore Me を開く」をオンにしたときだけです。オフにするかアンインストールすると元に戻ります
 - **削除したものはごみ箱に入ります**（ごみ箱のあるドライブ）。完全に削除するのは Shift+Delete のときだけで、必ず確認します
-- **インストーラーはコード署名をしていません。** 初めて実行するときに Windows の警告が出ることがあります。各リリースにインストーラーの SHA-256 と VirusTotal の検査結果を載せています（[ダウンロード](#ダウンロード)）
+- **インストーラーはコード署名をしていません。** 初めて実行するときに Windows の警告が出ることがあります。各リリースにインストーラーの SHA-256 を載せています（[ダウンロード](#ダウンロード)）
 
 ## スクリーンショット
 
@@ -271,10 +271,10 @@ Ask questions, share ideas or report bugs in [Discussions](../../discussions). Y
 心配な場合は、ダウンロードしたファイルが本物か確かめられます。各リリースのページに SHA-256 の値を載せています。PowerShell で次を実行し、同じ値か比べてください。
 
 ```powershell
-Get-FileHash .\ExploreMe-Setup-0.5.0.exe -Algorithm SHA256
+Get-FileHash .\ExploreMe-Setup-0.5.1.exe -Algorithm SHA256
 ```
 
-インストーラーはリリースごとに VirusTotal で検査しています。v0.5.0: [検出 0 / 68](https://www.virustotal.com/gui/file/f557a98aca8ffaeaace8806317d2736561f848a80fcd19062874a7f6544774b1)（2026-09-26 に検査）。
+VirusTotal での検査結果（v0.5.0 のインストーラー）: [検出 0 / 68](https://www.virustotal.com/gui/file/f557a98aca8ffaeaace8806317d2736561f848a80fcd19062874a7f6544774b1)（2026-09-26 に検査）。
 
 ## 更新
 
