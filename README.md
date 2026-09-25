@@ -13,7 +13,8 @@ A tabbed, dual-pane file manager for Windows that looks and works like the Windo
 - Workspaces (save and reopen a whole set of tabs), color labels, and the Shelf (collect items with Ctrl+S, then move or copy them together)
 - Disk usage, flat view, and search through subfolders (uses Everything or the Windows index when available)
 - Filter with wildcards and conditions (`*.jpg`, `size:>10MB`, `date:today`) and group by date or date taken; the sort order and grouping are remembered for each folder
-- Create and extract zip files; extract 7z, rar, tar.gz and more
+- Open zip, 7z, rar, tar.gz and other archives like folders (read-only) and copy items out of them; create zip files
+- Safer file operations: an Undo button right after a delete, move or copy; a file replaced by a copy or move is kept in the Recycle Bin; free space is checked before copying
 - English / Japanese, light / dark
 
 ## Screenshots
@@ -63,10 +64,10 @@ It works like File Explorer. Press **F1** in the app for every shortcut, and **C
 | Show hidden files | Ctrl+H |
 
 - Right-click opens a Windows 11 style menu. For the full Windows menu (including items added by 7-Zip and other apps), Shift+right-click or choose "Show more options"
-- Extract an archive (zip, 7z, rar, tar.gz and more) with "Extract here" in its right-click menu
+- Double-click an archive (zip, 7z, rar, tar.gz and more) to look inside it like a folder; copy items out with Ctrl+C or Shift+F5. "Extract here" in its right-click menu extracts all of it
 - In the filter box (Ctrl+E), `*.jpg`, `ext:png`, `kind:picture`, `size:>10MB` and `date:today` narrow the list; separate several with spaces
-- Drag a tab to reorder it or to move it to the other pane
-- Turn on "Open folders with Explore Me" in Settings to open folders from the desktop and other apps in Explore Me as well
+- Drag a tab to reorder it or to move it to the other pane. When the tabs do not fit, use the ◀ ▶ buttons or the list of every tab (▾)
+- Turn on "Open folders with Explore Me" in Settings to open folders from the desktop and other apps in Explore Me as well, and "Open Explore Me with Win+E" for Win+E (it takes effect once you sign in again)
 
 ## Download
 
@@ -90,10 +91,10 @@ Choose **More info → Run anyway**.
 To make sure the file is the genuine one, compare its SHA-256 with the value on the release page. In PowerShell:
 
 ```powershell
-Get-FileHash .\ExploreMe-Setup-0.4.0.exe -Algorithm SHA256
+Get-FileHash .\ExploreMe-Setup-0.5.0.exe -Algorithm SHA256
 ```
 
-The installer is scanned on VirusTotal for each release. v0.4.0: [0 / 65 detections](https://www.virustotal.com/gui/file/6b658b8b73d75c7016d316fae1cd73ef578f176141c29d3ad77d64b6c1d78051) (scanned on 2026-09-25).
+The installer is scanned on VirusTotal for each release. v0.5.0: [0 / 68 detections](https://www.virustotal.com/gui/file/f557a98aca8ffaeaace8806317d2736561f848a80fcd19062874a7f6544774b1) (scanned on 2026-09-26).
 
 ## Updates
 
@@ -109,7 +110,7 @@ The update check (GitHub) is the only network access. No usage data is sent.
 ## Uninstall
 
 Uninstall Explore Me from Windows Settings → Apps → Installed apps.
-If "Open folders with Explore Me" was on, folders open in File Explorer again.
+If "Open folders with Explore Me" or "Open Explore Me with Win+E" was on, File Explorer takes them back (Win+E once you sign in again).
 
 ## License
 
@@ -129,6 +130,7 @@ Send bug reports and requests by email from Settings → Feedback in the app.
 ## Known limitations
 
 - 7z, rar and the like can be extracted, not created (only zip can be created). Password-protected archives cannot be extracted
+- An archive opened as a folder is read-only, and its items cannot be dragged out (use Copy or Copy to other side). Archives of more than 200,000 items are not opened as folders
 - Old Japanese archives (lzh, tar and others with Shift_JIS names) may not extract with the right file names
 - The preview of Office, OpenDocument and EPUB files shows their text and tables, not their layout. Pictures such as HEIC or RAW show only when Windows has the codec for them (Microsoft Store extensions); video and audio formats the app cannot play (avi, wmv, wma…) show Windows' thumbnail and details instead
 
@@ -147,7 +149,8 @@ Windows 11 のエクスプローラーと同じ見た目・操作で使える、
 - ワークスペース（開いているタブ一式を保存して呼び出す）、カラーラベル、仮置き（Ctrl+S で集めてまとめて移動）
 - 容量の内訳、フラット表示、サブフォルダーの検索（Everything・Windows のインデックスがあれば使う）
 - 絞り込みにワイルドカードと条件（`*.jpg`・`サイズ:>10MB`・`日付:今日`）、日付や撮影日時でのグループ表示。並べ替えとグループはフォルダーごとに覚えます
-- zip の作成・展開、7z・rar・tar.gz などの展開
+- zip・7z・rar・tar.gz などの書庫をフォルダーのように開いて（読み取り専用）中の項目を取り出せます。zip の作成も
+- 安心して操作できるように: 削除・移動・コピーの直後に「元に戻す」ボタン、コピーや移動で置き換えたファイルはごみ箱に残す、コピーの前に空き容量を確認
 - 日本語 / 英語、ライト / ダーク
 
 ## スクリーンショット
@@ -197,10 +200,10 @@ Windows 11 のエクスプローラーと同じ見た目・操作で使える、
 | 隠しファイルの表示 | Ctrl+H |
 
 - 右クリックは Windows 11 風のメニューです。7-Zip などが加えた項目も含む Windows 本来のメニューは、Shift+右クリックか「その他のオプションを確認」から
-- 書庫（zip・7z・rar・tar.gz など）は右クリックの「ここに展開」で展開できます
+- 書庫（zip・7z・rar・tar.gz など）はダブルクリックでフォルダーのように中を見られます。中の項目は Ctrl+C や Shift+F5 で取り出せます。右クリックの「ここに展開」で全部を展開できます
 - 絞り込み欄（Ctrl+E）では `*.jpg`・`拡張子:png`・`種類:画像`・`サイズ:>10MB`・`日付:今日` で絞れます。空白で区切って組み合わせられます
-- タブはドラッグで並べ替え・反対側のペインへ移動できます
-- 「フォルダーを Explore Me で開く」を設定でオンにすると、デスクトップやほかのアプリから開いたフォルダーも Explore Me で開きます
+- タブはドラッグで並べ替え・反対側のペインへ移動できます。入りきらないときは ◀ ▶ かすべてのタブの一覧（▾）から
+- 「フォルダーを Explore Me で開く」を設定でオンにすると、デスクトップやほかのアプリから開いたフォルダーも Explore Me で開きます。「Win+E で Explore Me を開く」をオンにすると Win+E でも（サインインし直すと反映されます）
 
 ## ダウンロード
 
@@ -224,10 +227,10 @@ Windows 11 のエクスプローラーと同じ見た目・操作で使える、
 心配な場合は、ダウンロードしたファイルが本物か確かめられます。各リリースのページに SHA-256 の値を載せています。PowerShell で次を実行し、同じ値か比べてください。
 
 ```powershell
-Get-FileHash .\ExploreMe-Setup-0.4.0.exe -Algorithm SHA256
+Get-FileHash .\ExploreMe-Setup-0.5.0.exe -Algorithm SHA256
 ```
 
-インストーラーはリリースごとに VirusTotal で検査しています。v0.4.0: [検出 0 / 65](https://www.virustotal.com/gui/file/6b658b8b73d75c7016d316fae1cd73ef578f176141c29d3ad77d64b6c1d78051)（2026-09-25 に検査）。
+インストーラーはリリースごとに VirusTotal で検査しています。v0.5.0: [検出 0 / 68](https://www.virustotal.com/gui/file/f557a98aca8ffaeaace8806317d2736561f848a80fcd19062874a7f6544774b1)（2026-09-26 に検査）。
 
 ## 更新
 
@@ -243,7 +246,7 @@ Get-FileHash .\ExploreMe-Setup-0.4.0.exe -Algorithm SHA256
 ## アンインストール
 
 Windows の「設定 → アプリ → インストールされているアプリ」から Explore Me をアンインストールします。
-「フォルダーを Explore Me で開く」をオンにしていた場合も、元のエクスプローラーに戻ります。
+「フォルダーを Explore Me で開く」「Win+E で Explore Me を開く」をオンにしていた場合も、元のエクスプローラーに戻ります（Win+E はサインインし直すと反映されます）。
 
 ## ライセンス
 
@@ -263,5 +266,6 @@ Windows・Visual Studio Code は Microsoft グループの商標です。その�
 ## 既知の制限
 
 - 7z・rar などは展開だけです（作成は zip のみ）。パスワード付きの書庫は展開できません
+- フォルダーのように開いた書庫の中は読み取り専用で、項目をドラッグして外へ出すことはできません（コピーか「反対側へコピー」で取り出します）。項目が 20 万を超える書庫はフォルダーとしては開きません
 - 古い日本語の書庫（Shift_JIS の名前の lzh・tar など）は、名前が正しく展開されないことがあります
 - Office・OpenDocument・EPUB のプレビューは文字と表だけで、レイアウトは再現しません。HEIC や RAW などの写真は、Windows にそのコーデック（Microsoft Store の拡張機能）があるときだけ表示できます。アプリで再生できない動画・音声（avi・wmv・wma など）は、代わりに Windows のサムネイルと詳細を表示します
