@@ -8,9 +8,27 @@ English | [日本語](#日本語)
 
 **[Download the latest version](../../releases/latest)** · free · Windows 11 (64-bit) · English and Japanese
 
-- **Two panes, each with tabs.** Shift+F5 copies and Shift+F6 moves the selection to the other pane
-- **Quick Look.** Space shows a large preview of photos (HEIC and camera RAW too), video, PDF and Office files, and the arrow keys go through the folder
+- **Two panes that work together.** Shift+F5 copies and Shift+F6 moves the selection to the other pane, and the panes can follow each other into subfolders
+- **Quick Look, built in.** Space shows a large preview of photos (HEIC and camera RAW too), video, PDF and Office files, and the arrow keys go through the folder. Nothing else to install
 - **Undo that brings files back.** An Undo button right after a delete, move or copy. A file replaced by a copy or move goes to the Recycle Bin (on local drives), so Undo restores it too
+
+## How is it different?
+
+Compared on September 26, 2026 with File Explorer on Windows 11 25H2 (build 26200) and with [Files](https://files.community) 4.2.9.
+
+| | File Explorer | Files | Explore Me |
+| --- | --- | --- | --- |
+| Two panes | — | ✓ | ✓ |
+| Copy or move the selection to the other pane with one key | — | — | ✓ Shift+F5 / Shift+F6 |
+| Panes that follow each other into subfolders | — | — | ✓ |
+| Quick Look with Space | With PowerToys Peek (installed separately) | Opens Peek, QuickLook or Seer (installed separately) | ✓ Built in |
+| Search through subfolders with Everything | — | — | ✓ When Everything is running |
+| Flat view (the files of all subfolders in one list) | — (a search for `*` comes close) | — | ✓ |
+| What takes up the space in a folder, largest first, as bars | — | — (folder sizes in the list) | ✓ |
+| Named sets of tabs to save and reopen (workspaces) | — (reopens the last tabs at sign-in) | — (reopens the last tabs) | ✓ |
+| An Undo button right after a delete, move or copy | — | — | ✓ |
+
+Where the others are ahead: File Explorer is built into Windows, and the Open and Save dialogs of other apps are always File Explorer. Files has themes and background images, Git integration, tags and a column view, runs on Windows 10 and ARM64, and is open source.
 
 ## Features
 
@@ -143,7 +161,7 @@ Bundled third-party software (Electron, 7-Zip and others) is covered by its own 
 
 Copyright (c) 2026 ternando0831-lang
 
-Windows and Visual Studio Code are trademarks of the Microsoft group of companies. Other product names are trademarks of their respective owners.
+Windows, PowerToys and Visual Studio Code are trademarks of the Microsoft group of companies. Other product names are trademarks of their respective owners.
 
 ## Feedback
 
@@ -166,9 +184,27 @@ Ask questions, share ideas or report bugs in [Discussions](../../discussions). Y
 
 **[最新版をダウンロード](../../releases/latest)**（無料・Windows 11 の 64 ビット版・日本語と英語）
 
-- **2 画面とタブ**: 選んだものを Shift+F5 で反対側へコピー、Shift+F6 で移動
-- **クイックルック**: Space で大きくプレビュー。HEIC やカメラの RAW の写真、動画、PDF、Office のファイルも。矢印キーでフォルダーの中を次々に見られます
+- **連携する 2 画面**: 選んだものを Shift+F5 で反対側へコピー、Shift+F6 で移動。サブフォルダーへの移動に反対側を追従させることもできます
+- **クイックルックを内蔵**: Space で大きくプレビュー。HEIC やカメラの RAW の写真、動画、PDF、Office のファイルも。矢印キーでフォルダーの中を次々に見られます。ほかに何も入れる必要はありません
 - **置き換えたファイルも元に戻せる**: 削除・移動・コピーの直後に「元に戻す」ボタン。コピーや移動で置き換えたファイルはごみ箱に入るので（PC の内蔵ドライブ）、元に戻すで戻ります
+
+## ほかとの違い
+
+2026 年 9 月 26 日に、Windows 11 25H2（ビルド 26200）のエクスプローラー、[Files](https://files.community) 4.2.9 と比べました。
+
+| | エクスプローラー | Files | Explore Me |
+| --- | --- | --- | --- |
+| 2 画面 | — | ✓ | ✓ |
+| 選んだものを 1 キーで反対側へコピー・移動 | — | — | ✓ Shift+F5 / Shift+F6 |
+| サブフォルダーへの移動に反対側が追従 | — | — | ✓ |
+| Space でクイックルック | PowerToys の Peek（別に入れる） | Peek・QuickLook・Seer を呼ぶ（別に入れる） | ✓ 内蔵 |
+| Everything でサブフォルダーを検索 | — | — | ✓ Everything が動いているとき |
+| フラット表示（サブフォルダーのファイルを 1 つの一覧に） | —（`*` の検索が近い） | — | ✓ |
+| フォルダーの中で場所を取っているものを、大きい順に棒で | — | —（一覧にフォルダーのサイズ） | ✓ |
+| 名前を付けたタブ一式の保存と呼び出し（ワークスペース） | —（サインイン時に前のタブを開く） | —（前のタブを開く） | ✓ |
+| 削除・移動・コピーの直後の「元に戻す」ボタン | — | — | ✓ |
+
+ほかが勝っているところ: エクスプローラーは Windows に最初から入っていて、ほかのアプリの「開く」「保存」の画面は常にエクスプローラーです。Files には着せ替え（テーマ・背景画像）、Git との連携、タグ、カラム表示があり、Windows 10 と ARM64 でも動き、オープンソースです。
 
 ## 機能
 
@@ -301,7 +337,7 @@ Windows の「設定 → アプリ → インストールされているアプ�
 
 Copyright (c) 2026 ternando0831-lang
 
-Windows・Visual Studio Code は Microsoft グループの商標です。その他の製品名は、それぞれの権利者の商標です。
+Windows・PowerToys・Visual Studio Code は Microsoft グループの商標です。その他の製品名は、それぞれの権利者の商標です。
 
 ## フィードバック
 
