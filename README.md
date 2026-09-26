@@ -10,7 +10,7 @@ English | [日本語](#日本語)
 
 - **Two panes that work together.** Shift+F5 copies and Shift+F6 moves the selection to the other pane, and the panes can follow each other into subfolders
 - **Quick Look, built in.** Space shows a large preview of photos (HEIC and camera RAW too), video, PDF and Office files, and the arrow keys go through the folder. Nothing else to install
-- **Undo that brings files back.** An Undo button right after a delete, move or copy. A file replaced by a copy or move goes to the Recycle Bin (on local drives), so Undo restores it too
+- **Undo that brings files back — even after the app was closed.** An Undo button right after a delete, move or copy, and the Activity history (Ctrl+Shift+H) to undo earlier steps, also from before a restart. A file replaced by a copy or move goes to the Recycle Bin (on local drives), so Undo restores it too
 
 ## How is it different?
 
@@ -27,6 +27,10 @@ Compared on September 26, 2026 with File Explorer on Windows 11 25H2 (build 2620
 | What takes up the space in a folder, largest first, as bars | — | — (folder sizes in the list) | ✓ |
 | Named sets of tabs to save and reopen (workspaces) | — (reopens the last tabs at sign-in) | — (reopens the last tabs) | ✓ |
 | An Undo button right after a delete, move or copy | — | — | ✓ |
+| Undo from a list of past steps, also after the app was closed | — (Ctrl+Z only) | — (Ctrl+Z only) | ✓ Ctrl+Shift+H |
+| What was deleted from this folder, from the Recycle Bin | — (the whole Recycle Bin) | — (the whole Recycle Bin) | ✓ |
+| Each copied file read back and compared with its original | — | — | ✓ In Settings |
+| Failed items listed at the end, with a retry of just those | — (stops and asks at each one) | — (asks when a file is in use) | ✓ |
 
 Where the others are ahead: File Explorer is built into Windows, and the Open and Save dialogs of other apps are always File Explorer. Files has themes and background images, Git integration, tags and a column view, runs on Windows 10 and ARM64, and is open source.
 
@@ -52,6 +56,8 @@ Inside the app, a folder of 100,000 files opens in about 0.9 s. With System32 op
 - A folder on a network computer that does not answer never holds up the rest of the app
 - Open zip, 7z, rar, tar.gz and other archives like folders (read-only) and copy items out of them; create zip files
 - Free space is checked before copying, and on FAT32 drives files of 4 GB or more are left out with a note, instead of failing at the end
+- A copy or move that could not do everything goes on with the rest and lists what failed and why at the end, with a retry of just those items. Optionally, each copied file is read back and compared with its original (Settings → Behavior); a move to another drive removes the original only after that
+- Activity history (Ctrl+Shift+H): undo past copies, moves, deletes and renames from a list, also after the app was closed, and see what was deleted from the current folder and put it back
 - English / Japanese, light / dark
 
 ## Is it safe?
@@ -112,6 +118,7 @@ It works like File Explorer. Press **F1** in the app for every shortcut, and **C
 | Command palette (find commands and folders by name) | Ctrl+K |
 | Put on the Shelf (move or copy them together later) | Ctrl+S |
 | Undo / redo (also a delete to the Recycle Bin) | Ctrl+Z / Ctrl+Y |
+| Activity history (undo earlier steps, also from before a restart) | Ctrl+Shift+H |
 | Large icons / medium icons / list / details | Ctrl+Shift+2 / 3 / 5 / 6 |
 | Show hidden files | Ctrl+H |
 
@@ -143,10 +150,10 @@ Choose **More info → Run anyway**.
 To make sure the file is the genuine one, compare its SHA-256 with the value on the release page. In PowerShell:
 
 ```powershell
-Get-FileHash .\ExploreMe-Setup-0.6.0.exe -Algorithm SHA256
+Get-FileHash .\ExploreMe-Setup-0.7.0.exe -Algorithm SHA256
 ```
 
-VirusTotal: the v0.5.0 installer, [0 / 68 detections](https://www.virustotal.com/gui/file/f557a98aca8ffaeaace8806317d2736561f848a80fcd19062874a7f6544774b1) (scanned on 2026-09-26).
+VirusTotal: the v0.7.0 installer, [0 / 67 detections](https://www.virustotal.com/gui/file/677cee4620ffdb58d03f1ab58b951aca6733bc4b3da6b59b7f6f0f8ebba3eb64) (scanned on 2026-09-27).
 
 ## Updates
 
@@ -198,7 +205,7 @@ Ask questions, share ideas or report bugs in [Discussions](../../discussions). Y
 
 - **連携する 2 画面**: 選んだものを Shift+F5 で反対側へコピー、Shift+F6 で移動。サブフォルダーへの移動に反対側を追従させることもできます
 - **クイックルックを内蔵**: Space で大きくプレビュー。HEIC やカメラの RAW の写真、動画、PDF、Office のファイルも。矢印キーでフォルダーの中を次々に見られます。ほかに何も入れる必要はありません
-- **置き換えたファイルも元に戻せる**: 削除・移動・コピーの直後に「元に戻す」ボタン。コピーや移動で置き換えたファイルはごみ箱に入るので（PC の内蔵ドライブ）、元に戻すで戻ります
+- **アプリを閉じた後でも元に戻せる**: 削除・移動・コピーの直後に「元に戻す」ボタン。前の操作は操作の履歴（Ctrl+Shift+H）から、再起動の前の分も戻せます。コピーや移動で置き換えたファイルはごみ箱に入るので（PC の内蔵ドライブ）、元に戻すで戻ります
 
 ## ほかとの違い
 
@@ -215,6 +222,10 @@ Ask questions, share ideas or report bugs in [Discussions](../../discussions). Y
 | フォルダーの中で場所を取っているものを、大きい順に棒で | — | —（一覧にフォルダーのサイズ） | ✓ |
 | 名前を付けたタブ一式の保存と呼び出し（ワークスペース） | —（サインイン時に前のタブを開く） | —（前のタブを開く） | ✓ |
 | 削除・移動・コピーの直後の「元に戻す」ボタン | — | — | ✓ |
+| 前の操作を一覧から元に戻す（アプリを閉じた後でも） | —（Ctrl+Z だけ） | —（Ctrl+Z だけ） | ✓ Ctrl+Shift+H |
+| このフォルダーで削除した項目を、ごみ箱から一覧 | —（ごみ箱全体） | —（ごみ箱全体） | ✓ |
+| コピーしたファイルを読み直して元と比べる | — | — | ✓ 設定で |
+| 失敗した項目を最後にまとめて示し、それだけを再試行 | —（1 件ごとに止まって聞く） | —（使用中のファイルで聞く） | ✓ |
 
 ほかが勝っているところ: エクスプローラーは Windows に最初から入っていて、ほかのアプリの「開く」「保存」の画面は常にエクスプローラーです。Files には着せ替え（テーマ・背景画像）、Git との連携、タグ、カラム表示があり、Windows 10 と ARM64 でも動き、オープンソースです。
 
@@ -240,6 +251,8 @@ Ask questions, share ideas or report bugs in [Discussions](../../discussions). Y
 - 応答しないネットワーク上のフォルダーがあっても、ほかの操作は待たされません
 - zip・7z・rar・tar.gz などの書庫をフォルダーのように開いて（読み取り専用）中の項目を取り出せます。zip の作成も
 - コピーの前に行き先の空き容量を確認。FAT32 のドライブには 4 GB 以上のファイルを置けないので、最後に失敗する代わりに、その旨を添えて外します
+- コピーや移動の途中で失敗した項目があっても残りを続け、最後に失敗した項目と理由を示して、それだけを再試行できます。設定で、コピーしたファイルを読み直して元と比べることもできます（設定 → 操作）。別のドライブへの移動では、一致を確かめてから元を消します
+- 操作の履歴（Ctrl+Shift+H）: コピー・移動・削除・名前の変更を一覧から元に戻せます（アプリを閉じた後でも）。開いているフォルダーで削除した項目を一覧して、ごみ箱から戻すこともできます
 - 日本語 / 英語、ライト / ダーク
 
 ## 安全ですか？
@@ -300,6 +313,7 @@ Ask questions, share ideas or report bugs in [Discussions](../../discussions). Y
 | コマンドパレット（操作やフォルダーを名前で探す） | Ctrl+K |
 | 仮置きに入れる（あとでまとめて移動・コピー） | Ctrl+S |
 | 元に戻す / やり直す（ごみ箱への削除も戻せます） | Ctrl+Z / Ctrl+Y |
+| 操作の履歴（前の操作を戻す。再起動の前の分も） | Ctrl+Shift+H |
 | 表示の切り替え（大アイコン / 中アイコン / 一覧 / 詳細） | Ctrl+Shift+2 / 3 / 5 / 6 |
 | 隠しファイルの表示 | Ctrl+H |
 
@@ -331,10 +345,10 @@ Ask questions, share ideas or report bugs in [Discussions](../../discussions). Y
 心配な場合は、ダウンロードしたファイルが本物か確かめられます。各リリースのページに SHA-256 の値を載せています。PowerShell で次を実行し、同じ値か比べてください。
 
 ```powershell
-Get-FileHash .\ExploreMe-Setup-0.6.0.exe -Algorithm SHA256
+Get-FileHash .\ExploreMe-Setup-0.7.0.exe -Algorithm SHA256
 ```
 
-VirusTotal での検査結果（v0.5.0 のインストーラー）: [検出 0 / 68](https://www.virustotal.com/gui/file/f557a98aca8ffaeaace8806317d2736561f848a80fcd19062874a7f6544774b1)（2026-09-26 に検査）。
+VirusTotal での検査結果（v0.7.0 のインストーラー）: [検出 0 / 67](https://www.virustotal.com/gui/file/677cee4620ffdb58d03f1ab58b951aca6733bc4b3da6b59b7f6f0f8ebba3eb64)（2026-09-27 に検査）。
 
 ## 更新
 
