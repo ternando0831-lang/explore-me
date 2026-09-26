@@ -30,6 +30,16 @@ Compared on September 26, 2026 with File Explorer on Windows 11 25H2 (build 2620
 
 Where the others are ahead: File Explorer is built into Windows, and the Open and Save dialogs of other apps are always File Explorer. Files has themes and background images, Git integration, tags and a column view, runs on Windows 10 and ARM64, and is open source.
 
+**Speed**: the time from opening a folder from the command line until its item count shows (median of 5 on the author's PC, Windows 11 25H2, September 26, 2026).
+
+| | File Explorer | Files 4.2.9 | Explore Me 0.6.0 |
+| --- | --- | --- | --- |
+| C:\Windows\System32 (4,819 items), the app not running yet | — (always running) | 2.9 s | 0.8 s |
+| The same, the app already running | 1.0 s (a new window) | 1.0 s (a new window) | 0.2 s (a new tab) |
+| A folder of 10,000 files, the app already running | 1.1 s | 1.1 s | 0.2 s |
+
+Inside the app, a folder of 100,000 files opens in about 0.9 s. With System32 open, Files used 249 MB of memory and Explore Me 175 MB (private working set, what Task Manager shows).
+
 ## Features
 
 - The same keys and right-click menu as File Explorer (plus the full Windows menu under "Show more options")
@@ -38,6 +48,8 @@ Where the others are ahead: File Explorer is built into Windows, and the Open an
 - Workspaces (save and reopen a whole set of tabs), color labels, and the Shelf (collect items with Ctrl+S, then move or copy them together)
 - Disk usage, flat view, and search through subfolders (uses Everything or the Windows index when available)
 - Filter with wildcards and conditions (`*.jpg`, `size:>10MB`, `date:today`) and group by date or date taken; the sort order and grouping are remembered for each folder
+- Names are found however they are written: hiragana and katakana, and full-width and half-width characters, count as the same when you filter, jump to a name or use the command palette
+- A folder on a network computer that does not answer never holds up the rest of the app
 - Open zip, 7z, rar, tar.gz and other archives like folders (read-only) and copy items out of them; create zip files
 - Free space is checked before copying, and on FAT32 drives files of 4 GB or more are left out with a note, instead of failing at the end
 - English / Japanese, light / dark
@@ -131,7 +143,7 @@ Choose **More info → Run anyway**.
 To make sure the file is the genuine one, compare its SHA-256 with the value on the release page. In PowerShell:
 
 ```powershell
-Get-FileHash .\ExploreMe-Setup-0.5.1.exe -Algorithm SHA256
+Get-FileHash .\ExploreMe-Setup-0.6.0.exe -Algorithm SHA256
 ```
 
 VirusTotal: the v0.5.0 installer, [0 / 68 detections](https://www.virustotal.com/gui/file/f557a98aca8ffaeaace8806317d2736561f848a80fcd19062874a7f6544774b1) (scanned on 2026-09-26).
@@ -206,6 +218,16 @@ Ask questions, share ideas or report bugs in [Discussions](../../discussions). Y
 
 ほかが勝っているところ: エクスプローラーは Windows に最初から入っていて、ほかのアプリの「開く」「保存」の画面は常にエクスプローラーです。Files には着せ替え（テーマ・背景画像）、Git との連携、タグ、カラム表示があり、Windows 10 と ARM64 でも動き、オープンソースです。
 
+**速さ**: コマンドラインからフォルダーを開いて、項目の数が表示されるまでの時間（作者の PC、Windows 11 25H2 で 5 回の中央値、2026 年 9 月 26 日）。
+
+| | エクスプローラー | Files 4.2.9 | Explore Me 0.6.0 |
+| --- | --- | --- | --- |
+| C:\Windows\System32（4,819 項目）、アプリがまだ動いていないとき | —（常に動いている） | 2.9 秒 | 0.8 秒 |
+| 同じフォルダー、アプリがもう動いているとき | 1.0 秒（新しいウィンドウ） | 1.0 秒（新しいウィンドウ） | 0.2 秒（新しいタブ） |
+| 10,000 ファイルのフォルダー、アプリがもう動いているとき | 1.1 秒 | 1.1 秒 | 0.2 秒 |
+
+アプリの中では、100,000 ファイルのフォルダーが約 0.9 秒で開きます。System32 を開いた状態のメモリは、Files が 249 MB、Explore Me が 175 MB でした（プライベート ワーキング セット＝タスク マネージャーに出る値）。
+
 ## 機能
 
 - エクスプローラーと同じキー操作・右クリックメニュー（「その他のオプションを確認」で Windows 本来のメニューも）
@@ -214,6 +236,8 @@ Ask questions, share ideas or report bugs in [Discussions](../../discussions). Y
 - ワークスペース（開いているタブ一式を保存して呼び出す）、カラーラベル、仮置き（Ctrl+S で集めてまとめて移動）
 - 容量の内訳、フラット表示、サブフォルダーの検索（Everything・Windows のインデックスがあれば使う）
 - 絞り込みにワイルドカードと条件（`*.jpg`・`サイズ:>10MB`・`日付:今日`）、日付や撮影日時でのグループ表示。並べ替えとグループはフォルダーごとに覚えます
+- 名前は書き方が違っても見つかります。絞り込み・名前への移動・コマンドパレットで、ひらがなとカタカナ、全角と半角を同じものとして探します
+- 応答しないネットワーク上のフォルダーがあっても、ほかの操作は待たされません
 - zip・7z・rar・tar.gz などの書庫をフォルダーのように開いて（読み取り専用）中の項目を取り出せます。zip の作成も
 - コピーの前に行き先の空き容量を確認。FAT32 のドライブには 4 GB 以上のファイルを置けないので、最後に失敗する代わりに、その旨を添えて外します
 - 日本語 / 英語、ライト / ダーク
@@ -307,7 +331,7 @@ Ask questions, share ideas or report bugs in [Discussions](../../discussions). Y
 心配な場合は、ダウンロードしたファイルが本物か確かめられます。各リリースのページに SHA-256 の値を載せています。PowerShell で次を実行し、同じ値か比べてください。
 
 ```powershell
-Get-FileHash .\ExploreMe-Setup-0.5.1.exe -Algorithm SHA256
+Get-FileHash .\ExploreMe-Setup-0.6.0.exe -Algorithm SHA256
 ```
 
 VirusTotal での検査結果（v0.5.0 のインストーラー）: [検出 0 / 68](https://www.virustotal.com/gui/file/f557a98aca8ffaeaace8806317d2736561f848a80fcd19062874a7f6544774b1)（2026-09-26 に検査）。
